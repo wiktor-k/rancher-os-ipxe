@@ -1,0 +1,5 @@
+#!ipxe
+set base-url https://releases.rancher.com/os/latest
+kernel ${base-url}/vmlinuz rancher.cloud_init.datasources=[url:https://raw.githubusercontent.com/wiktor-k/rancher-os-ipxe/master/cloud-config.yaml]
+initrd ${base-url}/initrd
+boot
